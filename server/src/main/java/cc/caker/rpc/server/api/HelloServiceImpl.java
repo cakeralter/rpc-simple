@@ -1,6 +1,7 @@
 package cc.caker.rpc.server.api;
 
 import cc.caker.rpc.api.HelloService;
+import cc.caker.rpc.core.annotation.Provider;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -11,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
  * @since 1.0
  */
 @Slf4j
+@Provider(service = HelloService.class)
 public class HelloServiceImpl implements HelloService {
 
     @Override

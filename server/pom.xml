@@ -21,6 +21,10 @@
             <groupId>cc.caker</groupId>
             <artifactId>api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>cc.caker</groupId>
+            <artifactId>core</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

@@ -14,8 +14,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * RpcServer
@@ -27,10 +27,10 @@ import java.util.concurrent.ConcurrentHashMap;
 @Slf4j
 public class RpcServer {
 
-    private final Map<String, Object> instanceMap = new ConcurrentHashMap<>();
+    private static final Map<String, Object> INSTANCE_MAP = new HashMap<>();
 
-    public void regist(String className, Object obj) {
-        instanceMap.put(className, obj);
+    public static void register(String serviceName, Object instance) {
+        INSTANCE_MAP.put(serviceName, instance);
     }
 
     public void start() {
@@ -49,7 +49,7 @@ public class RpcServer {
                         Class<?>[] paramTypes = request.getParamTypes();
                         Object[] params = request.getParams();
 
-                        Object instance = instanceMap.get(className);
+                        Object instance = INSTANCE_MAP.get(className);
                         Method method = instance.getClass().getMethod(methodName, paramTypes);
                         Object result = method.invoke(instance, params);
 

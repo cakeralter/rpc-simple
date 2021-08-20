@@ -31,4 +31,12 @@ public class Request implements Serializable {
      * 参数
      */
     private Object[] params;
+    /**
+     * group
+     */
+    private String group = "RPC";
+    /**
+     * version
+     */
+    private String version = "1.0.0";
 }
