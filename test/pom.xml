@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>core</artifactId>
+    <artifactId>test</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -19,7 +19,18 @@
     <dependencies>
         <dependency>
             <groupId>cc.caker</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cc.caker</groupId>
+            <artifactId>core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

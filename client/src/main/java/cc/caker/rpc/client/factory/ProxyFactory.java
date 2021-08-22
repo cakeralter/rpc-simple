@@ -1,4 +1,4 @@
-package cc.caker.rpc.client;
+package cc.caker.rpc.client.factory;
 
 import cc.caker.rpc.common.model.Request;
 import cc.caker.rpc.common.model.Response;
