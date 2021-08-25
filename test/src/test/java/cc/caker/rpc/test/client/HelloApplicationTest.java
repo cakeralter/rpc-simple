@@ -1,4 +1,4 @@
-package test.client;
+package cc.caker.rpc.test.client;
 
 import cc.caker.rpc.client.HelloApplication;
 import cc.caker.rpc.client.impl.HelloApplicationImpl;
